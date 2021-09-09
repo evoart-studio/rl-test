@@ -38,14 +38,16 @@ class AddEmployee extends Component
     }
 
     protected array $rules = [
-        'name' => 'required',
-        'surname' => 'required',
-        'salary' => 'numeric',
+        'name' => 'required|alpha_num',
+        'surname' => 'required|alpha_num',
+        'patronymic' => 'alpha_num',
+        'salary' => 'numeric|min:0',
         'departments' => 'required',
     ];
 
     protected array $validationAttributes = [
         'surname' => 'Фамилия',
+        'patronymic' => 'Отчество',
         'salary' => 'Заработная плата',
         'departments' => 'Отделы',
     ];
