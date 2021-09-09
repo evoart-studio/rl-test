@@ -21,7 +21,15 @@ class Employees extends Model
 
     public static function gender($key): string
     {
-        $out = $key == 'male' ? 'Мужчина' : 'Женщина';
+        $out = "";
+        
+        if ( $key == 'male' ) {
+            $out = 'Мужчина';
+        }
+        if ( $key == 'female' ) {
+            $out = 'Женщина';
+        }
+
         return $out;
     }
 
