@@ -38,9 +38,9 @@ class AddEmployee extends Component
     }
 
     protected array $rules = [
-        'name' => 'required|alpha_num',
-        'surname' => 'required|alpha_num',
-        'patronymic' => 'alpha_num',
+        'name' => 'required|alpha_dash',
+        'surname' => 'required|alpha_dash',
+        'patronymic' => 'alpha_dash',
         'salary' => 'numeric|min:0',
         'departments' => 'required',
     ];
